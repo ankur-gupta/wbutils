@@ -1,3 +1,7 @@
+DATASET_ARTIFACT_TYPE = 'dataset'
+DATASET_MODEL_TYPE = 'model'
+WEIGHTS_FILENAME = 'weights.pth'
+
 LOSS = 'loss'
 ACCURACY_PCT = 'acc_pct'
 ACCURACY_FRAC = 'acc_frac'
