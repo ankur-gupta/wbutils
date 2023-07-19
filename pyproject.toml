@@ -20,6 +20,7 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
+    "torch",
     "click>=8.0.3"
 ]
 
