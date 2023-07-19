@@ -7,6 +7,7 @@ from wbutils.include import include_files, TRAIN_SPLIT, VAL_SPLIT, TEST_SPLIT, S
 from wbutils.directory import set_wb_directory, set_artifacts_directory, get_wb_directory, get_artifacts_directory
 import wbutils.parsing as parsing
 import wbutils.parsing.pytorch
+import wbutils.keys
 
 _ROOT = os.path.abspath(os.path.dirname(__file__))
 
