@@ -1,10 +1,5 @@
 from .directory import get_wb_directory, get_artifacts_directory
 
-TRAIN_SPLIT = 'train'
-VAL_SPLIT = 'val'
-TEST_SPLIT = 'test'
-SPLITS = [TRAIN_SPLIT, VAL_SPLIT, TEST_SPLIT]
-
 INCLUDE_STUBS = [
     '.py',
     '.ipynb',

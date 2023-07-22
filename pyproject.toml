@@ -21,6 +21,7 @@ classifiers = [
 ]
 dependencies = [
     "torch",
+    "ujson",
     "click>=8.0.3"
 ]
 
