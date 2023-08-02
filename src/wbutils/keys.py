@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 TRAIN_SPLIT = 'train'
 VAL_SPLIT = 'val'
 TEST_SPLIT = 'test'

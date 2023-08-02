@@ -1,3 +1,4 @@
+from __future__ import annotations
 from .directory import get_wb_directory, get_artifacts_directory
 
 INCLUDE_STUBS = [
