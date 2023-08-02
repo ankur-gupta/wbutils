@@ -34,10 +34,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pipx install hatch
-    # `notrandom` is defined in pyproject.toml and generates .coverage file
+    # `not-random` is defined in pyproject.toml and generates .coverage file
     - name: Test
       run: |
-        hatch run test:notrandom
+        hatch run test:not-random
+        hatch run test:coverage-json
     - name: Clean and build
       run: |
         hatch clean
@@ -52,7 +53,7 @@ jobs:
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         
         # Path to coverage file to upload
-        file: .coverage
+        file: coverage.json
         
         # Specify whether or not CI build should fail if Codecov runs into an error during upload
         fail_ci_if_error: true
