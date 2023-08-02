@@ -38,7 +38,7 @@ jobs:
     - name: Test
       run: |
         hatch run test:not-random
-        hatch run test:coverage-json
+        hatch run test:coverage-xml
     - name: Clean and build
       run: |
         hatch clean
@@ -48,8 +48,10 @@ jobs:
         pwd
         pip install dist/wbutils-*.whl
     - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v3
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-        file: coverage.json  # Path to coverage file to upload
+      uses: codecov/codecov-action@v3.1.4
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        env_vars: OS,PYTHON
+        files: ./coverage.xml
         fail_ci_if_error: true  # Should the CI build fail if Codecov runs into an error during upload
+        verbose: true
