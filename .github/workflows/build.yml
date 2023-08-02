@@ -33,7 +33,7 @@ jobs:
     - name: Install hatch
       run: |
         python -m pip install --upgrade pip
-        pipx install hatch
+        pip install hatch
     # `not-random` is defined in pyproject.toml and generates .coverage file
     - name: Test
       run: |
