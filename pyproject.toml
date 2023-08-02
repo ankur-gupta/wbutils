@@ -21,6 +21,7 @@ classifiers = [
 ]
 dependencies = [
     "torch",
+    "wandb",
     "ujson",
     "click>=8.0.3"
 ]
@@ -34,6 +35,7 @@ path = "src/wbutils/version.py"
 
 [tool.hatch.envs.test]
 dependencies = [
+    "wandb",
     "coverage[toml]",
     "pytest",
     "pytest-cov",
@@ -48,7 +50,7 @@ notslow = "coverage -m \"not slow\""
 notrandom = "coverage -m \"not random\""
 
 [[tool.hatch.envs.test.matrix]]
-python = ["3.9", "3.11"]
+python = ["3.8", "3.9", "3.11"]
 
 [tool.coverage.run]
 omit = [
