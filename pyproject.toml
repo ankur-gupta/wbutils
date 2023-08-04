@@ -34,6 +34,7 @@ path = "src/wbutils/version.py"
 
 [tool.hatch.envs.test]
 dependencies = [
+    "hatch",
     "coverage",
     "codecov",
     "pytest",
